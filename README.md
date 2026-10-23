@@ -23,47 +23,40 @@ portofolio/
 
 ---
 
-## Panduan Hosting di GitHub Pages
+## Panduan Hosting di Vercel (Paling Direkomendasikan)
 
-Ikuti langkah-langkah mudah berikut untuk mempublikasikan portofolio ini ke internet secara gratis menggunakan **GitHub Pages**:
+Karena repositori Anda sudah terunggah di GitHub (`https://github.com/fdwi/portofolio`), cara termudah dan tercepat adalah menghubungkannya langsung ke Vercel:
 
-### 1. Buat Repositori Baru di GitHub
-1. Masuk ke akun GitHub Anda di [github.com](https://github.com).
-2. Klik tombol **New** (Buat repositori baru).
-3. Beri nama repositori, misalnya: `portofolio` (atau `fdwi691.github.io` jika ingin menjadi domain utama akun).
-4. Pilih visibilitas **Public**.
-5. Jangan centang "Initialize this repository with a README" (karena kita sudah memiliki berkas lokal).
-6. Klik **Create repository**.
+### Cara 1: Lewat Web Dashboard Vercel (1-Click & Otomatis Update)
+1. Buka [vercel.com/new](https://vercel.com/new).
+2. Masuk / Sign in menggunakan akun **GitHub** Anda (`fdwi`).
+3. Pada daftar repositori, cari repositori **`fdwi/portofolio`**, lalu klik tombol **Import**.
+4. Di bagian **Configure Project**:
+   - **Framework Preset**: Biarkan `Other` (Vercel otomatis mendeteksi HTML/CSS/JS statis).
+   - **Root Directory**: `./` (default).
+   - Tidak perlu konfigurasi Build Command atau Output Directory.
+5. Klik **Deploy**.
+6. Selesai! Dalam hitungan detik website portofolio Anda langsung aktif dengan domain gratis berakhiran `.vercel.app` (misal: `https://portofolio-fdwi.vercel.app`).
+   > *Keuntungan*: Setiap kali Anda melakukan `git push` ke repositori GitHub, Vercel akan otomatis memperbarui tampilan web secara instan.
 
-### 2. Hubungkan Repositori Lokal dan Unggah (Push)
-Buka terminal di folder proyek ini (`c:\Users\LENOVO\Documents\portofolio`), lalu jalankan perintah berikut:
-
+### Cara 2: Lewat Terminal (Vercel CLI)
+Jika ingin deploy langsung dari terminal komputer Anda:
 ```bash
-# Simpan semua perubahan lokal
-git add .
-git commit -m "feat: inisialisasi portofolio bersih Dwi Febriyanto"
-
-# Pastikan nama branch utama adalah main
-git branch -M main
-
-# Tambahkan remote GitHub Anda (ganti URL sesuai repositori yang Anda buat)
-git remote add origin https://github.com/fdwi691/portofolio.git
-
-# Unggah berkas ke GitHub
-git push -u origin main
+npx vercel
+```
+1. Ikuti petunjuk di terminal untuk login (tekan `Enter` untuk membuka browser).
+2. Pilih scope akun Anda.
+3. Saat ditanya *Link to existing project?*, ketik `N`.
+4. Beri nama proyek: `portofolio`.
+5. Tekan `Enter` untuk opsi default lainnya.
+6. Untuk deploy versi produksi:
+```bash
+npx vercel --prod
 ```
 
-### 3. Aktifkan Fitur GitHub Pages
-1. Pada halaman repositori Anda di GitHub, klik tab **Settings** (Pengaturan).
-2. Pada menu bilah samping kiri (sidebar), klik menu **Pages** (di bagian *Code and automation*).
-3. Di bagian **Build and deployment**:
-   - **Source**: Pilih `Deploy from a branch`.
-   - **Branch**: Pilih `main` dan folder `/ (root)`.
-   - Klik **Save**.
-4. Tunggu sekitar 1 hingga 2 menit. GitHub akan menampilkan tautan situs aktif Anda, contohnya:
-   `https://fdwi691.github.io/portofolio/`
-
 ---
+
+## Opsi Alternatif: Hosting di GitHub Pages
 
 ## Fitur Utama Portofolio
 - **Mode Terang & Gelap (Light / Dark Theme)**: Deteksi otomatis preferensi sistem pengguna serta penyimpanan status pilihan di penyimpanan lokal (`localStorage`).
