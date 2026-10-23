@@ -86,16 +86,17 @@
           </div>
 
           <h1 id="hero-title" class="hero-heading">
-            Membangun antarmuka web yang terencana, solutif, dan terkoneksi perangkat keras.
+            Membangun solusi web, perancangan antarmuka, rekayasa IoT, dan karya desain grafis.
           </h1>
 
           <p class="hero-description">
-            Halo, saya <strong>Dwi Febriyanto</strong>. Saya berfokus pada rancang bangun aplikasi web responsif, desain antarmuka pengguna yang teruji, serta integrasi sistem IoT untuk pemantauan data fisik secara terukur.
+            Halo, saya <strong>Dwi Febriyanto</strong>. Saya berfokus pada pengembangan aplikasi web fungsional, perancangan antarmuka UI/UX yang intuitif, integrasi sistem IoT, serta eksplorasi desain grafis dan identitas visual yang terarah.
           </p>
 
           <div class="hero-tags" aria-label="Spesialisasi">
             <span class="specialty-badge">Web Development</span>
             <span class="specialty-badge">UI/UX Design</span>
+            <span class="specialty-badge">Desain Grafis</span>
             <span class="specialty-badge">IoT Engineering</span>
           </div>
 
@@ -106,37 +107,48 @@
         </div>
 
         <div class="hero-visual">
-          <div class="interactive-showcase-card">
-            <div class="card-top-bar">
-              <span class="card-tag">Simulator Mini</span>
-              <span class="terminal-status">Sistem Aktif</span>
+          <div class="profile-overview-card">
+            <div class="overview-header">
+              <span class="overview-tag">Kompetensi Inti</span>
+              <span class="overview-status">4 Bidang Utama</span>
             </div>
-            <div class="card-body">
-              <p class="preview-title">Sensor & Kontrol IoT Real-Time</p>
-              <div class="sensor-readout-grid">
-                <div class="sensor-box">
-                  <span class="sensor-label">Suhu Lingkungan</span>
-                  <div class="sensor-val-wrap">
-                    <span id="tempValue" class="sensor-val">28.4</span>
-                    <span class="sensor-unit">°C</span>
-                  </div>
-                </div>
-                <div class="sensor-box">
-                  <span class="sensor-label">Kelembapan</span>
-                  <div class="sensor-val-wrap">
-                    <span id="humidityValue" class="sensor-val">64</span>
-                    <span class="sensor-unit">%</span>
-                  </div>
+            <div class="overview-body">
+              <div class="discipline-item">
+                <div class="discipline-bullet"></div>
+                <div class="discipline-info">
+                  <span class="discipline-title">Web Development</span>
+                  <span class="discipline-sub">React, Laravel, Supabase, Vanilla JS</span>
                 </div>
               </div>
 
-              <div class="iot-control-row">
-                <span class="control-label">Relay Aktuator:</span>
-                <button type="button" id="relayBtn" class="relay-toggle-btn" aria-pressed="false">
-                  Status: Non-Aktif
-                </button>
+              <div class="discipline-item">
+                <div class="discipline-bullet"></div>
+                <div class="discipline-info">
+                  <span class="discipline-title">UI/UX Design</span>
+                  <span class="discipline-sub">User Research, Wireframing, Figma System</span>
+                </div>
               </div>
-              <p class="preview-footnote">Data diperbarui otomatis setiap 3 detik via simulasi event bus.</p>
+
+              <div class="discipline-item">
+                <div class="discipline-bullet"></div>
+                <div class="discipline-info">
+                  <span class="discipline-title">Desain Grafis</span>
+                  <span class="discipline-sub">Brand Identity, Apparel Mockup, Poster Kreatif</span>
+                </div>
+              </div>
+
+              <div class="discipline-item">
+                <div class="discipline-bullet"></div>
+                <div class="discipline-info">
+                  <span class="discipline-title">IoT Engineering</span>
+                  <span class="discipline-sub">ESP32, ESP8266, Arduino, Telemetri Sensor</span>
+                </div>
+              </div>
+
+              <div class="overview-footer-meta">
+                <span class="meta-location">Indonesia (WIB / UTC+7)</span>
+                <span class="meta-collab">Terbuka untuk Kolaborasi</span>
+              </div>
             </div>
           </div>
         </div>
@@ -190,7 +202,8 @@
           <button type="button" class="filter-chip active" data-filter="all" aria-pressed="true">Semua Proyek (12)</button>
           <button type="button" class="filter-chip" data-filter="web" aria-pressed="false">Web Development (5)</button>
           <button type="button" class="filter-chip" data-filter="iot" aria-pressed="false">IoT & Hardware (4)</button>
-          <button type="button" class="filter-chip" data-filter="design" aria-pressed="false">UI/UX & Desain (3)</button>
+          <button type="button" class="filter-chip" data-filter="uiux" aria-pressed="false">UI/UX Design (1)</button>
+          <button type="button" class="filter-chip" data-filter="graphic" aria-pressed="false">Desain Grafis (2)</button>
         </div>
 
         <!-- Projects Grid -->
@@ -396,7 +409,7 @@
           </article>
 
           <!-- 10. UI/UX Design - Harian Disway -->
-          <article class="project-card" data-category="design">
+          <article class="project-card" data-category="uiux">
             <div class="project-header">
               <span class="project-badge">UI/UX Design</span>
               <span class="project-year">Desain</span>
@@ -419,7 +432,7 @@
           </article>
 
           <!-- 11. Desain Jaket SI -->
-          <article class="project-card" data-category="design">
+          <article class="project-card" data-category="graphic">
             <div class="project-header">
               <span class="project-badge">Graphic Design</span>
               <span class="project-year">Desain</span>
@@ -441,7 +454,7 @@
           </article>
 
           <!-- 12. Desain Poster Kreatif -->
-          <article class="project-card" data-category="design">
+          <article class="project-card" data-category="graphic">
             <div class="project-header">
               <span class="project-badge">Graphic Design</span>
               <span class="project-year">Desain</span>
@@ -568,6 +581,26 @@
               <li>
                 <span class="skill-name">Perancangan Responsif Mobile-First</span>
                 <span class="skill-note">Zona sentuh nyaman (min. 44px)</span>
+          </div>
+
+          <div class="skill-category-card">
+            <h3 class="category-heading">Desain Grafis</h3>
+            <ul class="skill-list">
+              <li>
+                <span class="skill-name">Identitas Visual & Branding</span>
+                <span class="skill-note">Skema warna harmonis, logo emblem</span>
+              </li>
+              <li>
+                <span class="skill-name">Desain Apparel & Mockup Vektor</span>
+                <span class="skill-note">Figma, pola pakaian, visualisasi 3 sisi</span>
+              </li>
+              <li>
+                <span class="skill-name">Publikasi Acara & Desain Poster</span>
+                <span class="skill-note">Adobe Photoshop, Canva</span>
+              </li>
+              <li>
+                <span class="skill-name">Tata Letak & Hierarki Tipografi</span>
+                <span class="skill-note">Focal point, keterbacaan visual tajam</span>
               </li>
             </ul>
           </div>

@@ -106,41 +106,7 @@
     });
   }
 
-  /* ==========================================================================
-     4. INTERACTIVE SENSOR & RELAY SIMULATOR (HERO)
-     ========================================================================== */
-  const tempValueEl = document.getElementById('tempValue');
-  const humidityValueEl = document.getElementById('humidityValue');
-  const relayBtn = document.getElementById('relayBtn');
 
-  if (tempValueEl && humidityValueEl) {
-    setInterval(function () {
-      // Small realistic fluctuations
-      const baseTemp = 28.0;
-      const baseHumidity = 65;
-      const tempDelta = (Math.random() * 1.2 - 0.6).toFixed(1);
-      const humidityDelta = Math.floor(Math.random() * 5 - 2);
-
-      tempValueEl.textContent = (baseTemp + parseFloat(tempDelta)).toFixed(1);
-      humidityValueEl.textContent = String(baseHumidity + humidityDelta);
-    }, 3000);
-  }
-
-  if (relayBtn) {
-    relayBtn.addEventListener('click', function () {
-      const isPressed = relayBtn.getAttribute('aria-pressed') === 'true';
-      const newState = !isPressed;
-      relayBtn.setAttribute('aria-pressed', String(newState));
-      
-      if (newState) {
-        relayBtn.classList.add('is-active');
-        relayBtn.textContent = 'Status: Aktif (Menyala)';
-      } else {
-        relayBtn.classList.remove('is-active');
-        relayBtn.textContent = 'Status: Non-Aktif';
-      }
-    });
-  }
 
   /* ==========================================================================
      5. PROJECT FILTERING SYSTEM
